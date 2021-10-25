@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en-GB">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="../css/style.css" />
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <script src="../js/fonction.js" defer></script>
+      <script src="../js/shop.js" defer></script>
+      <script src="https://kit.fontawesome.com/45e38e596f.js" defer crossorigin="anonymous"></script>
+      <title>Orinoak</title>
+   </head>
+   <body class="bg-grey text-center" >
+      <header class="text-center bg-gradient">
+         <div class="container ">
+            <div class="row align-items-center">
+               <div class="col-2">
+                  <h1>Orinoak</h1>
+               </div>
+               <div class="col-10">
+                  <nav class="navbar navbar-dark">
+                     <form class="container-fluid justify-content-end">
+                        <a href="./index.html" class="btn btn-secondary me-2">Home</a>
+                        <a href="./shop.html" class="btn btn-sm btn-secondary me-2">Cart<span class="count mx-1 p-1 rounded-circle border border-light"> 0 </span></a>
+                        <button class="btn btn-sm btn-secondary me-2" type="button">Contact</button>
+                     </form>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </header>
+      <main class="cover-container">
+         <div class="container card my-2 bg-primary">
+            <div class="row justify-content-center">
+               <div class="col-2 m-0 p-0">
+                  <p>
+                     Product
+                  </p>  
+               </div>           
+               <div class="col-3 m-0 p-0">   
+                  <p>Name</p>
+               </div>
+               <div class="col-2 m-0 p-0">
+                  <p>Price</p>
+               </div>
+               <div class="col-2 m-0 p-0">
+                  <p class ="my-0">Quantity</p>
+               </div>
+               <div class="col-2 m-0 p-0">
+                  <p>Total</p>
+               </div>
+            </div>
+         </div>
+         <div class="container products-container p-0">
+         </div>
+         <div class="container card my-2 bg-primary">
+            <!-- Formulaire de contact -->
+            <form id="contactForm">
+               <div class="row">
+                  <div class="form-group col-6">
+                     <label for="InputFirstName">FirstName</label>
+                     <input type="text" name="firstName" class="form-control inputControl" minlength="2" maxlength="20" id="InputFirstName" placeholder="Enter your firstname" required>
+                  </div>
+                  <div class="form-group col-6">
+                     <label for="InputLastName">LastName</label>
+                     <input type="text" name="lastName" class="form-control inputControl" id="InputLastName" minlength="2" maxlength="20" placeholder="Enter your lastname" required> 
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="form-group col-6">
+                     <label for="InputEmail">Email address</label>
+                     <input type="email" name="email" class="form-control inputControl" id="InputEmail" minlength="2" maxlength="30" placeholder="Enter your email" required>
+                  </div>
+                  <div class="form-group col-6">
+                     <label for="InputTel">Phone number</label>
+                     <input type="tel" name="phoneNumber" class="form-control inputControl" id="InputTel" minlength="9" maxlength="20" placeholder="Enter your phone number">
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="form-group col-6">
+                     <label for="InputAddress">Address</label>
+                     <input type="text" name="address" class="form-control inputControl" id="InputAddress" minlength="5" maxlength="40" placeholder="Enter your address"  required>
+                  </div>
+                  <div class="form-group col-3">
+                     <label for="InputPostalCode">Postal Code</label>
+                     <input type="text" name="postalCode" class="form-control inputControl" id="InputPostalCode" placeholder="Enter your postal code" required>
+                  </div>
+                  <div class="form-group col-3">
+                     <label for="InputTown">Town</label>
+                     <input type="text" name="city" class="form-control inputControl" id="InputTown" minlength="2" maxlength="20" placeholder="Enter your town"  required>
+                  </div>
+                  <!-- Coordonnées banquaires en option -->
+                  <!-- <div class="form-group row justify-content-evenly ">
+                     <label for="InputCardNumber1" >Card number</label>
+                     <input type="text" name="cardNumberOne" id="InputCardNumber1" class="form-control w-25 col-3"  minlength="4" maxlength="4"  placeholder="1234 " pattern="[0-9]{4}" required>
+                     <input type="text" name="cardNumberTwo" id="InputCardNumber2" class="form-control w-25 col-3"  minlength="4" maxlength="4"  placeholder="1234 " pattern="[0-9]{4}" required>
+                     <input type="text" name="cardNumberThree" id="InputCardNumber3" class="form-control w-25 col-3"  minlength="4" maxlength="4" placeholder="1234 " pattern="[0-9]{4}" required>
+                     </div>
+                     
+                      <label for="InputFirstNameOnCard">Name on card</label>
+                      <div class="row">
+                         <div class="form-group col-6">
+                           <input type="text" name="firstNameOnCard" id="InputFirstNameOnCard"  class="form-control inputControl"  minlength="2" maxlength="20" placeholder="Ex: Jeff"  required>
+                         </div>
+                           <div class="form-group col-6">
+                           <input type="text" name="lastNameOnCard" id="InputLastNameOnCard"  class="form-control inputControl"  minlength="2" maxlength="20" placeholder="Ex: Bezos" required>
+                         </div>
+                     </div>
+                     <div class="row">
+                     <div class="form-group col-6">
+                     <label for="InputExpiryDate">Expiry date</label>
+                     <input type="text" name="expiryDate" class="form-control inputControl"  id="InputExpiryDate" minlength="3" maxlength="7" placeholder="05/1999" pattern="[0-9]{2}/[0-9]{4}" required>
+                     </div>
+                     <div class="form-group col-6">
+                        <label for="InputCVV">CVV</label>
+                        <input type="text" name="cvv" class="form-control inputControl" id="InputCVV" minlength="3" maxlength="3" pattern="[0-9]{3}" placeholder="***" required>   
+                     </div> -->
+               </div>
+               <!-- Prix total + submit -->
+               <div class="total-container container card my-3 ">
+               </div>
+            </form>
+         </div>
+      </main>
+      <!-- Footer -->
+      <footer>
+         <!-- Section: Social media -->
+         <div class=" bg-gradient">
+            <div class="container">
+               <!-- Facebook -->
+               <a class="btn btn-secondary btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-facebook-f"></i
+                  ></a>
+               <!-- Twitter -->
+               <a class="btn btn-secondary btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-twitter"></i
+                  ></a>
+               <!-- Google -->
+               <a class="btn btn-secondary btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-google"></i
+                  ></a>
+               <!-- Instagram -->
+               <a class="btn btn-secondary btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-instagram"></i
+                  ></a>
+               <!-- Linkedin -->
+               <a class="btn btn-secondary btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-linkedin-in"></i
+                  ></a>
+               <!-- Github -->
+               <a class="btn btn-secondary btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-github"></i
+                  ></a>
+            </div>
+            <!-- Section: Social media -->
+            <!-- Section: Text -->
+            <div class="container">
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                  repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                  eum harum corrupti dicta, aliquam sequi voluptate quas.
+               </p>
+            </div>
+            <!-- Section: Text -->
+            <!-- Section: Links -->
+            <div class="container">
+               <ul class="nav justify-content-center">
+                  <li>
+                     <a href="#!" class=" nav-link ">Orinoco</a>
+                  </li>
+                  <li>
+                     <a href="#!" class=" nav-link">Oriteddy</a>
+                  </li>
+                  <li>
+                     <a href="#!" class=" nav-link  ">Oricam</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>

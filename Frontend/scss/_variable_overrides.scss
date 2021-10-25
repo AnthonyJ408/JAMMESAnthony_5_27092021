@@ -1,0 +1,5 @@
+$primary:  #DEB887  ;
+$secondary: #F4A460;
+$info: lighten($color:black, $amount: 40%);
+$font-family-sans-serif: "Beligerent Madness" , system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$gradient: linear-gradient(180deg, $primary, $secondary) ;
